@@ -41,4 +41,17 @@ chmod u+x *.sh | give the executable permissions to all the .sh files in the bin
 ln -s /opt/apache-tomcat-9.0.86/bin/startup.sh /usr/bin/startTomcat ***and*** ln -s /opt/apache-tomcat-9.0.86/bin/shutdown.sh /usr/bin/stopTomcat | creating the soft links for the *startup and Stoptomcat* sh files to access it easily every time
 login to the tomcat with manager app | comment the <value> tag in the /opt/apache-tomcat-9.0.90/webapps/manager/META-INF. why should we comment the value tag refer to the link: https://stackoverflow.com/a/36773669 
 `<user username="admin" password="password" roles="manager-gui,admin-gui"/>` | add the username, password, roles in the /opt/apache-tomcat-9.0.90/conf file to login to the manger app and see our deployed applications
- 
+ cp maven_build_java.war | copy the war from the local or maven build server
+
+
+## How to stop single webapplication in tomcat
+login to the tomcat from the browser and click on stop button next to the specified web application
+
+## difference between web servers and app servers
+Web servers: Nginx - web server, Apache HTTP server (static content), IIS
+app servers: Tomcat, Jboss
+
+|web server|Application server|
+|:---:|:---:|
+Deploy static content | deploy backend code and static content also(Java)
+used for load balancing | 
