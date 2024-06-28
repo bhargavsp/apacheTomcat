@@ -56,3 +56,14 @@ app servers: Tomcat, Jboss
 |:---:|:---:|
 Deploy static content | deploy backend code and static content also(Java)
 used for load balancing | 
+
+## how to change the port number of the tomcat
+1. Go to tomcat>conf folder
+2. Edit server.xml
+3. Search "Connector port"
+4. Replace "8080" by your port number
+5. Restart tomcat server <br/>
+![image](https://github.com/bhargavsp/apacheTomcat/assets/45779321/43e71c3e-2284-4c2a-a419-41c50022eb20)
+
+
+
