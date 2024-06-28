@@ -40,8 +40,8 @@ unzip apache-tomcat-9.0.86.zip | unzipping the downloaded apache tomcat zip file
 chmod u+x *.sh | give the executable permissions to all the .sh files in the bin/ directory as we have all the necessary files to start the tomcat server in the bin/ folder
 ln -s /opt/apache-tomcat-9.0.86/bin/startup.sh /usr/bin/startTomcat ***and*** ln -s /opt/apache-tomcat-9.0.86/bin/shutdown.sh /usr/bin/stopTomcat | creating the soft links for the *startup and Stoptomcat* sh files to access it easily every time
 run_as_service for the tomcat and also remove the run service | https://gist.github.com/ovichiro/d24c53ce4902ef41cc208efeadd596b6
-login to the tomcat with manager app | comment the <value> tag in the /opt/apache-tomcat-9.0.90/webapps/manager/META-INF. why should we comment the value tag refer to the link: https://stackoverflow.com/a/36773669 
-`<user username="admin" password="password" roles="manager-gui,admin-gui"/>` | add the username, password, roles in the /opt/apache-tomcat-9.0.90/conf file to login to the manger app and see our deployed applications
+login to the tomcat with manager app | comment the <value> tag in the context.xml file in /opt/apache-tomcat-9.0.90/webapps/manager/META-INF. why should we comment the value tag refer to the link: https://stackoverflow.com/a/36773669  ![image](https://github.com/bhargavsp/apacheTomcat/assets/45779321/7bd59336-ab9e-42e8-931b-038d3f45c097)
+`<user username="admin" password="password" roles="manager-gui,admin-gui"/>` | add the username, password, roles in the /opt/apache-tomcat-9.0.90/conf/tomcat-users.xml file to login to the manger app and see our deployed applications
  cp maven_build_java.war | copy the war from the local or maven build server
 
 
