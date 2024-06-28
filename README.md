@@ -66,4 +66,8 @@ used for load balancing |
 ![image](https://github.com/bhargavsp/apacheTomcat/assets/45779321/43e71c3e-2284-4c2a-a419-41c50022eb20)
 
 
+## ERROR
+|||
+|:---:|:---:|
+The username you provided is not allowed to use the text-based Tomcat Manager (error 403) | It comes if the username passowrd we gave in the jenkins job ar not having enough permissions to deploy our war file into the tomcat server
 
